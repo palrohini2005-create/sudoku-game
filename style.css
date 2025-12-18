@@ -8,6 +8,11 @@ body{
     align-items: center;
     flex-direction: column;
     color: #333;
+       
+    justify-content: center;
+   
+   
+   
 }
 @keyframes backgroundShift {
     0% {
@@ -153,7 +158,25 @@ h1{
   }
 }
 
+.sudoku-cell {
+    font-size: 2vw; /* scales with screen width */
+}
 
+
+@media (max-width: 600px) {
+    .sudoku-board {
+        width: 95vw;
+    }
+
+    .sudoku-cell {
+        font-size: 4vw;
+    }
+}
+
+.board-container {
+    overflow-x: auto;
+    padding: 10px;
+}
 
 
 
@@ -598,3 +621,11 @@ body::before {
   0% { transform: translateY(0) rotate(0deg); opacity:1; }
   100% { transform: translateY(500px) rotate(720deg); opacity:0; }
 }
+
+.sudoku-board {
+    width: 90vw;   /* 90% of viewport width */
+    height: auto;  /* maintain aspect ratio */
+    max-width: 400px; /* optional max size for bigger screens */
+    margin: 0 auto;   /* center horizontally */
+}
+
