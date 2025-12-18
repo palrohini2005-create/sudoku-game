@@ -35,7 +35,7 @@ An **interactive Sudoku game** built with **HTML, CSS, and JavaScript**. Challen
 
 ## Live Demo
 
-Play online: [https://ROHINI_PAL.github.io/sudoku-game/](https://ROHINI_PAL.github.io/sudoku-game/)
+Play online: (https://palrohini2005-create.github.io/sudoku-game/)
 
 ---
 
