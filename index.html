@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Sudoku</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="intro-body">
+<div class="cursor-light"></div>
+
+  <!-- Floating gradient blobs -->
+  <div class="bg-shapes">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Subtle sudoku grid overlay -->
+  <div class="sudoku-pattern"></div>
+
+  <!-- Main content -->
+  <div class="intro-container">
+    <h1> WELCOME TO <br>
+        Sudoku Game</h1>
+    <div class="tagline">
+  <span class="line mind">Challenge your mind</span>
+  <span class="line focus">Improve your focus</span>
+  <span class="line fun">Have fun!</span>
+</div>
+
+
+    <button class="start-btn" onclick="startGame()">Start Game</button>
+  </div>
+
+  <!-- Sound -->
+  <audio id="clickSound" src="click.mp3"></audio>
+
+  <script>
+
+     const light = document.querySelector(".cursor-light");
+
+  document.addEventListener("mousemove", (e) => {
+    light.style.left = e.clientX + "px";
+    light.style.top = e.clientY + "px";
+  });
+
+  let x = 0, y = 0;
+document.addEventListener("mousemove", e => {
+  x += (e.clientX - x) * 0.1;
+  y += (e.clientY - y) * 0.1;
+  light.style.left = x + "px";
+  light.style.top = y + "px";
+});
+
+    function startGame() {
+      const sound = document.getElementById("clickSound");
+      sound.play();
+
+      setTimeout(() => {
+        window.location.href = "game.html";
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>
+
